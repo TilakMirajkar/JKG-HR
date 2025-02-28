@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto">
+    <h1 class="text-2xl font-bold mb-4">{{ payroll.employee.name }}</h1>
+    <p><strong>Salary:</strong> {{ payroll.salary }}</p>
+    <p><strong>Deductions:</strong> {{ payroll.deductions }}</p>
+    <p><strong>Net Pay:</strong> {{ payroll.net_pay }}</p>
+    <p><strong>Payment Date:</strong> {{ payroll.payment_date }}</p>
+</div>
+{% endblock %}

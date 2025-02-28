@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto">
+    <h1 class="text-2xl font-bold mb-4">Recruitment</h1>
+    <a href="{% url 'recruitment_create' %}" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add Recruitment</a>
+    <div class="mt-6">
+        {% for recruitment in recruitments %}
+            <div class="bg-white p-4 rounded-lg shadow-md mb-4">
+                <h2 class="text-xl font-bold">{{ recruitment.job_title }}</h2>
+                <p><strong>Description:</strong> {{ recruitment.description }}</p>
+                <p><strong>Applicants:</strong> {{ recruitment.applicants }}</p>
+                <p><strong>Interview Date:</strong> {{ recruitment.interview_date }}</p>
+                <a href="{% url 'recruitment_detail' recruitment.id %}" class="text-blue-500 hover:underline">View Details</a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

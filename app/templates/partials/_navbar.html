@@ -1,0 +1,15 @@
+<nav class="bg-blue-600 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+        <a href="{% url 'employee_list' %}" class="text-white text-xl font-bold">JKGBioscience HR</a>
+        <div class="space-x-4">
+            <a href="{% url 'employee_list' %}" class="text-white hover:text-gray-200">Employees</a>
+            <a href="{% url 'attendance_list' %}" class="text-white hover:text-gray-200">Attendance</a>
+            <a href="{% url 'leave_list' %}" class="text-white hover:text-gray-200">Leave</a>
+            <a href="{% url 'payroll_list' %}" class="text-white hover:text-gray-200">Payroll</a>
+            <a href="{% url 'performance_list' %}" class="text-white hover:text-gray-200">Performance</a>
+            <a href="{% url 'recruitment_list' %}" class="text-white hover:text-gray-200">Recruitment</a>
+            <a href="{% url 'training_list' %}" class="text-white hover:text-gray-200">Training</a>
+            <a href="{% url 'reports' %}" class="text-white hover:text-gray-200">Reports</a>
+        </div>
+    </div>
+</nav>

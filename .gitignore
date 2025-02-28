@@ -1,0 +1,7 @@
+/env
+.env
+app/__pycache__/
+app/migrations/
+jkg_hr/__pycache__/
+db.sqlite3
+/static

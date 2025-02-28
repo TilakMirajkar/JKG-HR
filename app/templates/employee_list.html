@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto">
+    <h1 class="text-2xl font-bold mb-4">Employees</h1>
+    <a href="{% url 'employee_create' %}" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add Employee</a>
+    <div class="mt-6">
+        {% for employee in employees %}
+            <div class="bg-white p-4 rounded-lg shadow-md mb-4">
+                <h2 class="text-xl font-bold">{{ employee.name }}</h2>
+                <p>{{ employee.role }}</p>
+                <a href="{% url 'employee_detail' employee.id %}" class="text-blue-500 hover:underline">View Details</a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

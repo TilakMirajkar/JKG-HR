@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto">
+    <h1 class="text-2xl font-bold mb-4">{{ employee.name }}</h1>
+    <p><strong>Role:</strong> {{ employee.role }}</p>
+    <p><strong>Department:</strong> {{ employee.department }}</p>
+    <p><strong>Joining Date:</strong> {{ employee.joining_date }}</p>
+    <p><strong>Salary:</strong> {{ employee.salary }}</p>
+    <img src="{{ employee.photo.url }}" alt="{{ employee.name }}" class="w-32 h-32 rounded-full mt-4">
+</div>
+{% endblock %}

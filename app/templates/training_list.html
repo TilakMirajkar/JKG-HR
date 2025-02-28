@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto">
+    <h1 class="text-2xl font-bold mb-4">Training</h1>
+    <a href="{% url 'training_create' %}" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add Training</a>
+    <div class="mt-6">
+        {% for training in trainings %}
+            <div class="bg-white p-4 rounded-lg shadow-md mb-4">
+                <h2 class="text-xl font-bold">{{ training.title }}</h2>
+                <p><strong>Description:</strong> {{ training.description }}</p>
+                <p><strong>Date:</strong> {{ training.date }}</p>
+                <a href="{% url 'training_detail' training.id %}" class="text-blue-500 hover:underline">View Details</a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
